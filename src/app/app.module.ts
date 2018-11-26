@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { RentalComponent } from './rental/rental.component';
 import { TempComponent } from './temp/temp.component';
+import { RentalListComponent } from './rental/rental-list/rental-list.component';
 
 const routes: Routes = [
   {path: '', component: RentalComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
     AppComponent,
     HeaderComponent,
     RentalComponent,
-    TempComponent
+    TempComponent,
+    RentalListComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
