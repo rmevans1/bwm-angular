@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'bwm-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['/header.component.scss']
 })
-export class AppComponent {
+export class HeaderComponent {
   componentTitle = 'I am app component from component.ts';
 
   clickHandler() {
