@@ -1,5 +1,6 @@
 const express = require('express'),
-      mongoose = require('mongoose');
+      mongoose = require('mongoose'),
+      Rental = require('./models/rental');
 
 //Load environment variables
 require('dotenv').config({silent: true});
