@@ -1,12 +1,15 @@
 const express = require('express'),
       mongoose = require('mongoose'),
-      Rental = require('./models/rental');
+      FakeDb = require('./fake-db');
 
 //Load environment variables
 require('dotenv').config({silent: true});
 
 //Connect to database
-mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }).then(() => {
+  const fakeDb = new FakeDb();
+  fakeDb.seedDb();
+});
 
 const app = express();
 
