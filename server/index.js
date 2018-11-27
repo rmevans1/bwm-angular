@@ -2,6 +2,8 @@ const express = require('express'),
       mongoose = require('mongoose'),
       FakeDb = require('./fake-db');
 
+const rentalRoutes = require('./routes/rentals');
+
 //Load environment variables
 require('dotenv').config({silent: true});
 
@@ -13,9 +15,8 @@ mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }).then(() => {
 
 const app = express();
 
-app.get('/rentals', function(req, res){
-  res.json({'success': true});
-});
+// Load api routes
+app.use('/api/v1/rentals', rentalRoutes);
 
 const PORT = process.env.port || 3001;
 
