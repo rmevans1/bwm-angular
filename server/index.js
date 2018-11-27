@@ -1,13 +1,13 @@
 const express = require('express'),
       mongoose = require('mongoose');
 
+//Load environment variables
 require('dotenv').config({silent: true});
 
-//mongoose.connect()
+//Connect to database
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
 
 const app = express();
-
-console.log(process.env.DB_URL);
 
 app.get('/rentals', function(req, res){
   res.json({'success': true});
