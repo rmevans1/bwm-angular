@@ -7,14 +7,14 @@ import {RentalListItemComponent} from './rental-list-item/rental-list-item.compo
 import {RentalComponent} from './rental.component';
 
 import { RentalService } from './shared/rental.service';
-import {TempComponent} from '../temp/temp.component';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
 
 const routes: Routes = [
   {path: 'rentals',
     component: RentalComponent,
     children: [
-      {path: '', component: RentalListComponent }
+      {path: '', component: RentalListComponent },
+      {path: ':rentalId', component: RentalDetailComponent}
     ]},
 ];
 
