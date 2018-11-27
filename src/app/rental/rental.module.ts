@@ -8,6 +8,7 @@ import {RentalComponent} from './rental.component';
 
 import { RentalService } from './shared/rental.service';
 import {TempComponent} from '../temp/temp.component';
+import { RentalDetailComponent } from './rental-detail/rental-detail.component';
 
 const routes: Routes = [
   {path: 'rentals',
@@ -21,7 +22,8 @@ const routes: Routes = [
   declarations: [
     RentalListComponent,
     RentalListItemComponent,
-    RentalComponent
+    RentalComponent,
+    RentalDetailComponent
   ],
   imports: [
     CommonModule
