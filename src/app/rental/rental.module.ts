@@ -26,7 +26,8 @@ const routes: Routes = [
     RentalDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   providers: [
     RentalService
