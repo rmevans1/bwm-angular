@@ -2,7 +2,8 @@ const express = require('express');
 
 const app = express();
 
+const PORT = process.env.port || 3001;
 
-app.listen(3001, function() {
+app.listen(PORT, function() {
   console.log('I am running');
 });
