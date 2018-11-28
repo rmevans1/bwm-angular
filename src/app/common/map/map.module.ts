@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MapComponent } from './map.component';
 import { AgmCoreModule } from '@agm/core';
 
+import { MapService } from './map.service';
+
 @NgModule({
   declarations: [
     MapComponent
@@ -14,7 +16,9 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyDpxebEnVe8ly-VN2x1QCifR2ENnaBV38s'
     })
   ],
-  providers: [],
+  providers: [
+    MapService
+  ],
   bootstrap: []
 })
 export class MapModule { }
