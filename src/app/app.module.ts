@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 
 import { RentalModule} from './rental/rental.module';
-import { MapComponent } from './common/map/map.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/rentals', pathMatch: 'full' }
@@ -15,8 +14,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    MapComponent
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
